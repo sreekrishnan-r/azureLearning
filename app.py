@@ -6,8 +6,10 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'sreekrishnan-flask-mysql-server.mysql.database.azure.com'
 app.config['MYSQL_PORT'] = 3306
 app.config['MYSQL_USER'] = 'admin'
-app.config['MYSQL_PASSWORD'] = 'admin'
+app.config['MYSQL_PASSWORD'] = 'Admin@123'
 app.config['MYSQL_DB'] = 'sreekrishnan-flask-mysql-database'
+
+mysql = MySQL(app)
 
 @app.route('/')
 def example():
