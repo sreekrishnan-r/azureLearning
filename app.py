@@ -16,7 +16,7 @@ mysql = MySQL(app)
 def example():
    with app.app_context():
       cursor = mysql.connection.cursor()
-      cursor.execute('show databases')
+      cursor.execute('create table information (name varchar(255), age int)')
       data = cursor.fetchall()
       cursor.close()
    print(len(data))
